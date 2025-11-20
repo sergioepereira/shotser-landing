@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShotSer Portfolio - Sergio Pereira</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2HfRaWtrEqW1QwBHbRyQcEz4KHDHtI7PLqJ1B+vYZOx+yXwozMS6lg7yRYYGdqxhsNWDW+lRzqH6DmGSSO8U2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Glider.js Carousel CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.9/glider.min.css" />
+  <!-- Custom Styles and Animations -->
+  <style>
+    html { scroll-behavior: smooth; }
+    .animate-fade-in-up {
+      animation: fade-in-up 1s ease-out forwards;
+    }
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-pulse-slow {
+      animation: pulse 5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    /* Signature font (use Google font "Dancing Script") */
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+    .font-signature {
+      font-family: 'Dancing Script', cursive;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-black text-gray-200 font-sans selection:bg-white selection:text-black">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-transparent px-6 py-4 backdrop-blur-sm transition-colors">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center cursor-pointer">
+        <span class="text-2xl font-signature text-white">ShotSer</span>
+      </div>
+      <ul class="flex space-x-6 text-gray-300 uppercase tracking-widest text-sm">
+        <li><a href="#hero" class="hover:text-white">Inicio</a></li>
+        <li><a href="#about" class="hover:text-white">Sobre Mí</a></li>
+        <li><a href="#portfolio" class="hover:text-white">Portafolio</a></li>
+        <li><a href="#precios" class="hover:text-white">Precios</a></li>
+        <li><a href="#recomendaciones" class="hover:text-white">Recomendaciones</a></li>
+        <li><a href="#contact" class="hover:text-white">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-black/60 z-10"></div>
+      <img src="https://picsum.photos/id/433/1920/1080" alt="ShotSer Portfolio Background" class="w-full h-full object-cover object-center opacity-80 animate-pulse-slow">
+    </div>
+    <!-- Content -->
+    <div class="relative z-20 text-center px-4 animate-fade-in-up">
+      <h2 class="text-gray-300 tracking-[0.2em] uppercase text-sm md:text-base mb-4">Fotografía Profesional</h2>
+      <h1 class="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-6">Sergio Pereira</h1>
+      <span class="font-signature text-4xl md:text-5xl text-white mb-8 opacity-90 block">ShotSer</span>
+      <p class="max-w-2xl mx-auto text-gray-400 mb-10 font-light text-lg leading-relaxed">
+        Retratos que dicen más que las palabras, espacios que invitan a quedarse y momentos que merecen ser recordados.
+      </p>
+      <a href="#portfolio">
+        <button class="px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-500 ease-out uppercase text-xs tracking-widest rounded-sm">
+          Ver Portafolio
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Sobre Mí Section -->
+  <section id="about" class="py-24 bg-neutral-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Image Side -->
+        <div class="relative order-2 lg:order-1 group">
+          <div class="absolute -inset-4 border border-white/10 rounded-sm z-0 transition-transform duration-700 group-hover:rotate-2"></div>
+          <div class="relative z-10 overflow-hidden rounded-sm aspect-[3/4] grayscale hover:grayscale-0 transition-all duration-700">
+            <img src="https://picsum.photos/id/338/800/1200" alt="Sergio Pereira" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+          </div>
+        </div>
+        <!-- Text Side -->
+        <div class="order-1 lg:order-2 space-y-8">
+          <h2 class="text-4xl md:text-5xl font-serif mb-6">Sobre mí</h2>
+          <div class="space-y-6 text-gray-400 font-light leading-relaxed text-lg">
+            <p>
+              Hola, soy <span class="text-white font-medium">Sergio Pereira</span>, también conocido como <span class="text-white font-signature text-2xl">ShotSer</span>.
+              Fotógrafo, periodista de formación y curioso por naturaleza.
+            </p>
+            <p>
+              Llevo más de una década entre cámaras, flashes y preguntas (algunas buenas, otras no tanto), y hoy me dedico a capturar imágenes con intención:
+              retratos que dicen más que las palabras, espacios que invitan a quedarse y momentos que merecen ser recordados.
+            </p>
+            <p>
+              Mi camino empezó en Venezuela, donde estudié Comunicación Audiovisual y Periodismo, y se ha desarrollado entre redacciones, sesiones de fotos,
+              reportajes, eventos y, ahora, desde Madrid. Construyo una marca propia con alma latina y mirada profesional.
+            </p>
+            <p>
+              Trabajo con personas, proyectos y marcas que necesitan verse bien, pero, sobre todo, sentirse bien representadas. Si estás buscando a alguien
+              que entienda tanto de luz como de contexto, que sepa dirigir una sesión sin hacerte sentir en un set de Hollywood,
+              pero sin perder calidad… probablemente deberíamos hablar.
+            </p>
+          </div>
+          <div class="border-l-2 border-white/20 pl-6 py-2 mt-8">
+            <h3 class="text-xl text-white font-serif mb-2">¿Qué hago?</h3>
+            <p class="text-gray-400 italic">
+              Fotografías de retrato, moda, stock, eventos y todo lo que implique una historia que merezca buena luz.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portafolio Section -->
+  <section id="portfolio" class="py-24 bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-5xl font-serif text-center mb-12">Portafolio</h2>
+
+      <!-- Architecture Category -->
+      <div class="mb-16">
+        <h3 class="text-3xl font-serif mb-4">Arquitectura</h3>
+        <div class="relative">
+          <button class="glider-prev glider-architecture-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full z-20">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="glider glider-architecture overflow-hidden">
+            <img src="https://picsum.photos/id/50/800/1200" alt="Líneas Urbanas" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/122/800/600" alt="Perspectiva Nocturna" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/234/800/1000" alt="Estructuras Modernas" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/238/800/1000" alt="Rascacielos" class="max-w-full h-auto"/>
+          </div>
+          <button class="glider-next glider-architecture-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full z-20">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Events Category -->
+      <div class="mb-16">
+        <h3 class="text-3xl font-serif mb-4">Eventos</h3>
+        <div class="relative">
+          <button class="glider-prev glider-events-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full z-20">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="glider glider-events overflow-hidden">
+            <img src="https://picsum.photos/id/331/800/600" alt="Gala Anual" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/449/800/1200" alt="Momento Decisivo" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/158/800/600" alt="Concierto en Vivo" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/452/800/600" alt="Boda Civil" class="max-w-full h-auto"/>
+          </div>
+          <button class="glider-next glider-events-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full z-20">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Portraits Category -->
+      <div class="mb-16">
+        <h3 class="text-3xl font-serif mb-4">Retratos</h3>
+        <div class="relative">
+          <button class="glider-prev glider-portraits-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full z-20">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="glider glider-portraits overflow-hidden">
+            <img src="https://picsum.photos/id/338/800/1200" alt="Mirada Profunda" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/64/800/1000" alt="Perfil Editorial" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/91/800/600" alt="Luz Natural" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/342/800/1000" alt="Estudio B&amp;W" class="max-w-full h-auto"/>
+          </div>
+          <button class="glider-next glider-portraits-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full z-20">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stock Category -->
+      <div class="mb-16">
+        <h3 class="text-3xl font-serif mb-4">Stock</h3>
+        <div class="relative">
+          <button class="glider-prev glider-stock-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full z-20">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="glider glider-stock overflow-hidden">
+            <img src="https://picsum.photos/id/252/800/600" alt="Texturas Naturales" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/106/800/1200" alt="Luces de Ciudad" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/299/800/600" alt="Minimalismo" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/319/800/1000" alt="Café y Trabajo" class="max-w-full h-auto"/>
+            <img src="https://picsum.photos/id/445/800/600" alt="Tecnología" class="max-w-full h-auto"/>
+          </div>
+          <button class="glider-next glider-stock-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full z-20">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precios Section -->
+  <section id="precios" class="py-24 bg-neutral-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-serif mb-6">Inversión</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg">
+          Calidad profesional adaptada a tus necesidades.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Retrato Card -->
+        <div class="bg-neutral-900/40 border border-white/10 p-8 flex flex-col hover:border-white/30 transition-colors duration-300 group">
+          <h3 class="text-3xl font-serif mb-2 group-hover:text-white transition-colors">Retrato</h3>
+          <p class="text-gray-500 text-sm mb-6 uppercase tracking-widest">Personal & Profesional</p>
+          <div class="text-4xl font-light mb-6">Desde 70€</div>
+          <p class="text-gray-400 mb-8 flex-grow">Sesiones diseñadas para capturar tu mejor versión, ya sea para uso personal, redes sociales o book profesional.</p>
+          <div class="space-y-3">
+            <button onclick="document.getElementById('modal-retratos').classList.remove('hidden')" class="w-full py-3 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors text-xs">Reservar</button>
+            <button onclick="document.getElementById('modal-retratos').classList.remove('hidden')" class="w-full py-3 border border-white/30 text-white uppercase tracking-wider hover:bg-white/10 transition-colors text-xs">Saber Más</button>
+          </div>
+        </div>
+        <!-- Eventos Card -->
+        <div class="bg-neutral-900/40 border border-white/10 p-8 flex flex-col hover:border-white/30 transition-colors duration-300 group">
+          <h3 class="text-3xl font-serif mb-2 group-hover:text-white transition-colors">Eventos</h3>
+          <p class="text-gray-500 text-sm mb-6 uppercase tracking-widest">Cobertura Completa</p>
+          <div class="text-4xl font-light mb-6">Desde 180€</div>
+          <p class="text-gray-400 mb-8 flex-grow">Capturo la atmósfera y los momentos clave de tu evento para que perduren en el tiempo.</p>
+          <div class="space-y-3">
+            <button onclick="document.getElementById('modal-eventos').classList.remove('hidden')" class="w-full py-3 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors text-xs">Reservar</button>
+            <button onclick="document.getElementById('modal-eventos').classList.remove('hidden')" class="w-full py-3 border border-white/30 text-white uppercase tracking-wider hover:bg-white/10 transition-colors text-xs">Saber Más</button>
+          </div>
+        </div>
+        <!-- Stock Card -->
+        <div class="bg-neutral-900/40 border border-white/10 p-8 flex flex-col hover:border-white/30 transition-colors duration-300 group">
+          <h3 class="text-3xl font-serif mb-2 group-hover:text-white transition-colors">Stock</h3>
+          <p class="text-gray-500 text-sm mb-6 uppercase tracking-widest">Comercial & Producto</p>
+          <div class="text-4xl font-light mb-6">Desde 150€</div>
+          <p class="text-gray-400 mb-8 flex-grow">Imágenes de alta calidad para potenciar tu marca, catálogo o tienda online.</p>
+          <div class="space-y-3">
+            <button onclick="document.getElementById('modal-stock').classList.remove('hidden')" class="w-full py-3 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors text-xs">Reservar</button>
+            <button onclick="document.getElementById('modal-stock').classList.remove('hidden')" class="w-full py-3 border border-white/30 text-white uppercase tracking-wider hover:bg-white/10 transition-colors text-xs">Saber Más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modals -->
+    <div id="modal-retratos" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="document.getElementById('modal-retratos').classList.add('hidden')"></div>
+      <div class="relative bg-neutral-900 border border-white/20 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl animate-fade-in-up">
+        <button onclick="document.getElementById('modal-retratos').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
+          <i class="fas fa-times fa-lg"></i>
+        </button>
+        <div class="p-8 md:p-12 text-white">
+          <h3 class="text-3xl font-serif mb-1 capitalize">Retratos</h3>
+          <p class="text-gray-500 mb-8 uppercase tracking-widest text-sm">Detalles del servicio</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-300 mb-8">
+              <thead class="text-xs text-white uppercase bg-white/10">
+                <tr>
+                  <th class="px-4 py-3">Opciones</th>
+                  <th class="px-4 py-3">Tiempo</th>
+                  <th class="px-4 py-3">Fotos (Sin Editar)</th>
+                  <th class="px-4 py-3">Fotos Editadas</th>
+                  <th class="px-4 py-3 text-right">Precios</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5">
+                <tr class="bg-white/5">
+                  <td class="px-4 py-3 font-medium text-white">Mini sesión</td>
+                  <td class="px-4 py-3">45 min</td>
+                  <td class="px-4 py-3">20</td>
+                  <td class="px-4 py-3">7</td>
+                  <td class="px-4 py-3 text-right font-bold">70€</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium text-white">Estándar</td>
+                  <td class="px-4 py-3">2 hrs</td>
+                  <td class="px-4 py-3">40</td>
+                  <td class="px-4 py-3">15</td>
+                  <td class="px-4 py-3 text-right font-bold">120€</td>
+                </tr>
+                <tr class="bg-white/5">
+                  <td class="px-4 py-3 font-medium text-white">Completa</td>
+                  <td class="px-4 py-3">2h 30 min</td>
+                  <td class="px-4 py-3">50</td>
+                  <td class="px-4 py-3">25</td>
+                  <td class="px-4 py-3 text-right font-bold">150€</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium text-white">Premium</td>
+                  <td class="px-4 py-3">3 hrs</td>
+                  <td class="px-4 py-3">70</td>
+                  <td class="px-4 py-3">35</td>
+                  <td class="px-4 py-3 text-right font-bold">250€</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+            <div>
+              <h4 class="font-bold text-white mb-2">Extras</h4>
+              <ul class="space-y-1 text-gray-400">
+                <li class="flex justify-between"><span>Foto editada extra:</span> <span class="text-white">7€</span></li>
+                <li class="flex justify-between"><span>Pack 5 fotos editadas:</span> <span class="text-white">25€</span></li>
+                <li class="flex justify-between"><span>Hora extra:</span> <span class="text-white">20€</span></li>
+                <li class="flex justify-between"><span>Foto sin editar extra:</span> <span class="text-white">5€</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-white mb-2">Entrega</h4>
+              <ul class="space-y-1 text-gray-400">
+                <li>Tiempo: 1 y 2 semanas</li>
+                <li>Express: 50€</li>
+                <li>Álbum/PDF: A consultar</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-end">
+            <button onclick="document.getElementById('modal-retratos').classList.add('hidden')" class="px-6 py-2 bg-white text-black font-medium uppercase tracking-wider hover:bg-gray-200 transition-colors">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-eventos" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="document.getElementById('modal-eventos').classList.add('hidden')"></div>
+      <div class="relative bg-neutral-900 border border-white/20 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl animate-fade-in-up">
+        <button onclick="document.getElementById('modal-eventos').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
+          <i class="fas fa-times fa-lg"></i>
+        </button>
+        <div class="p-8 md:p-12 text-white">
+          <h3 class="text-3xl font-serif mb-1 capitalize">Eventos</h3>
+          <p class="text-gray-500 mb-8 uppercase tracking-widest text-sm">Detalles del servicio</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-300 mb-8">
+              <thead class="text-xs text-white uppercase bg-white/10">
+                <tr>
+                  <th class="px-4 py-3">Opciones</th>
+                  <th class="px-4 py-3">Tiempo</th>
+                  <th class="px-4 py-3">Fotos (Sin Editar)</th>
+                  <th class="px-4 py-3">Fotos Editadas</th>
+                  <th class="px-4 py-3 text-right">Precios</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5">
+                <tr class="bg-white/5">
+                  <td class="px-4 py-3 font-medium text-white">Básico</td>
+                  <td class="px-4 py-3">1 hr</td>
+                  <td class="px-4 py-3">70</td>
+                  <td class="px-4 py-3">15</td>
+                  <td class="px-4 py-3 text-right font-bold">180€</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium text-white">Medio</td>
+                  <td class="px-4 py-3">2 hrs</td>
+                  <td class="px-4 py-3">120</td>
+                  <td class="px-4 py-3">35</td>
+                  <td class="px-4 py-3 text-right font-bold">290€</td>
+                </tr>
+                <tr class="bg-white/5">
+                  <td class="px-4 py-3 font-medium text-white">Completo</td>
+                  <td class="px-4 py-3">3 hrs</td>
+                  <td class="px-4 py-3">200</td>
+                  <td class="px-4 py-3">60</td>
+                  <td class="px-4 py-3 text-right font-bold">400€</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium text-white">Adicional (+3hrs)</td>
+                  <td class="px-4 py-3">1 hr</td>
+                  <td class="px-4 py-3">40</td>
+                  <td class="px-4 py-3">15</td>
+                  <td class="px-4 py-3 text-right font-bold">100€/hr</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+            <div>
+              <h4 class="font-bold text-white mb-2">Extras</h4>
+              <ul class="space-y-1 text-gray-400">
+                <li class="flex justify-between"><span>Hora extra cobertura:</span> <span class="text-white">100€</span></li>
+                <li class="flex justify-between"><span>Foto editada extra:</span> <span class="text-white">15€</span></li>
+                <li class="flex justify-between"><span>Pack 5 fotos editadas:</span> <span class="text-white">50€</span></li>
+                <li class="flex justify-between"><span>Foto sin editar extra:</span> <span class="text-white">7€</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-white mb-2">Otros</h4>
+              <ul class="space-y-1 text-gray-400">
+                <li>Desplazamiento fuera Madrid: A consultar</li>
+                <li>Tiempo de entrega: A consultar</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-end">
+            <button onclick="document.getElementById('modal-eventos').classList.add('hidden')" class="px-6 py-2 bg-white text-black font-medium uppercase tracking-wider hover:bg-gray-200 transition-colors">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-stock" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="document.getElementById('modal-stock').classList.add('hidden')"></div>
+      <div class="relative bg-neutral-900 border border-white/20 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl animate-fade-in-up">
+        <button onclick="document.getElementById('modal-stock').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
+          <i class="fas fa-times fa-lg"></i>
+        </button>
+        <div class="p-8 md:p-12 text-white">
+          <h3 class="text-3xl font-serif mb-1 capitalize">Stock</h3>
+          <p class="text-gray-500 mb-8 uppercase tracking-widest text-sm">Detalles del servicio</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-300 mb-8">
+              <thead class="text-xs text-white uppercase bg-white/10">
+                <tr>
+                  <th class="px-4 py-3">Opciones</th>
+                  <th class="px-4 py-3">Nº Artículos</th>
+                  <th class="px-4 py-3">Tiempo</th>
+                  <th class="px-4 py-3 text-right">Precio</th>
+                  <th class="px-4 py-3 text-right">Estudio</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5">
+                <tr class="bg-white/5">
+                  <td class="px-4 py-3 font-medium text-white">Mini</td>
+                  <td class="px-4 py-3">≤ 7</td>
+                  <td class="px-4 py-3">1h 30m</td>
+                  <td class="px-4 py-3 text-right">150€</td>
+                  <td class="px-4 py-3 text-right font-bold">200€</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium text-white">Básico</td>
+                  <td class="px-4 py-3">8-12</td>
+                  <td class="px-4 py-3">2h 30m</td>
+                  <td class="px-4 py-3 text-right">250€</td>
+                  <td class="px-4 py-3 text-right font-bold">300€</td>
+                </tr>
+                <tr class="bg-white/5">
+                  <td class="px-4 py-3 font-medium text-white">Estándar</td>
+                  <td class="px-4 py-3">13-18</td>
+                  <td class="px-4 py-3">3h 30m</td>
+                  <td class="px-4 py-3 text-right">350€</td>
+                  <td class="px-4 py-3 text-right font-bold">450€</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium text-white">Premium</td>
+                  <td class="px-4 py-3">19-30</td>
+                  <td class="px-4 py-3">4h 30m</td>
+                  <td class="px-4 py-3 text-right">500€</td>
+                  <td class="px-4 py-3 text-right font-bold">600€</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid grid-cols-1 gap-8 text-sm">
+            <div class="bg-white/5 p-4 border border-white/10">
+              <h4 class="font-bold text-white mb-2">Licencia de Uso</h4>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                El precio base incluye licencia para web y redes sociales. Usos extendidos (publicidad impresa, vallas) +200€.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold text-white mb-2">Extras</h4>
+              <ul class="space-y-1 text-gray-400">
+                <li class="flex justify-between"><span>Artículo adicional:</span> <span class="text-white">25€</span></li>
+                <li class="flex justify-between"><span>Hora extra:</span> <span class="text-white">120€</span></li>
+                <li class="flex justify-between"><span>Modelos/Estilismo:</span> <span class="text-white">A consultar</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-end">
+            <button onclick="document.getElementById('modal-stock').classList.add('hidden')" class="px-6 py-2 bg-white text-black font-medium uppercase tracking-wider hover:bg-gray-200 transition-colors">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recomendaciones Section -->
+  <section id="recomendaciones" class="py-24 bg-black text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-serif mb-12 text-center">Consejos para antes de la sesión</h2>
+      <div class="space-y-12">
+        <div class="group">
+          <div class="flex items-baseline border-b border-white/20 pb-4 mb-4">
+            <span class="text-3xl font-serif text-gray-600 group-hover:text-white transition-colors mr-6">01</span>
+            <h3 class="text-2xl text-white font-light">Preparación general</h3>
+          </div>
+          <div class="text-gray-400 pl-12 font-light leading-relaxed space-y-2">
+            <p>- Descansa bien la noche anterior (tu energía y piel lo agradecerán).</p>
+            <p>- Hidrátate bien los días previos.</p>
+            <p>- Evita probar nuevos productos o cremas justo antes de la sesión (por si causan reacción).</p>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="flex items-baseline border-b border-white/20 pb-4 mb-4">
+            <span class="text-3xl font-serif text-gray-600 group-hover:text-white transition-colors mr-6">02</span>
+            <h3 class="text-2xl text-white font-light">Ropa y vestuario</h3>
+          </div>
+          <div class="text-gray-400 pl-12 font-light leading-relaxed space-y-2">
+            <p>- Trae al menos 2 outfits completos y bien preparados (así tenemos opciones).</p>
+            <p>- Plancha o revisa que no tengan arrugas de último momento.</p>
+            <p>- Si tienes dudas sobre colores o estilos, dime antes y lo vemos juntos.</p>
+            <p>- Trae zapatos limpios y que combinen con los looks.</p>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="flex items-baseline border-b border-white/20 pb-4 mb-4">
+            <span class="text-3xl font-serif text-gray-600 group-hover:text-white transition-colors mr-6">03</span>
+            <h3 class="text-2xl text-white font-light">Maquillaje y cabello</h3>
+          </div>
+          <div class="text-gray-400 pl-12 font-light leading-relaxed space-y-2">
+            <p>- Si usas maquillaje, que sea un poco más trabajado que el del día a día (resalta más en cámara). A poder ser, trae un pequeño kit para retoques de último momento.</p>
+            <p>- Peina bien tu cabello y, si quieres, trae un peine o cepillo para retoques rápidos.</p>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="flex items-baseline border-b border-white/20 pb-4 mb-4">
+            <span class="text-3xl font-serif text-gray-600 group-hover:text-white transition-colors mr-6">04</span>
+            <h3 class="text-2xl text-white font-light">Accesorios y detalles extra</h3>
+          </div>
+          <div class="text-gray-400 pl-12 font-light leading-relaxed space-y-2">
+            <p>- Trae tus accesorios favoritos (pendientes, pulseras, sombreros...), si crees que aportan al look.</p>
+            <p>- Si la sesión es al aire libre, no olvides agua y protector solar.</p>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="flex items-baseline border-b border-white/20 pb-4 mb-4">
+            <span class="text-3xl font-serif text-gray-600 group-hover:text-white transition-colors mr-6">05</span>
+            <h3 class="text-2xl text-white font-light">Actitud y energía</h3>
+          </div>
+          <div class="text-gray-400 pl-12 font-light leading-relaxed space-y-2">
+            <p>- Ven con ganas de disfrutar, de moverte y pasarlo bien.</p>
+            <p>- No hace falta saber posar, yo te iré guiando en todo momento, para eso somos un equipo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 p-6 border border-white/10 bg-neutral-900/30 text-center">
+        <p class="font-signature text-2xl mb-2">ShotSer</p>
+        <p class="text-gray-400 text-sm">Lo más importante: ven con mente abierta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="min-h-screen bg-neutral-950 text-white flex flex-col lg:flex-row">
+    <!-- Image Side -->
+    <div class="w-full lg:w-1/2 h-96 lg:h-auto relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/30 z-10"></div>
+      <img src="https://picsum.photos/id/250/1000/1500" alt="Camera Lens" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-105 hover:scale-100" />
+    </div>
+    <!-- Content Side -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-center px-8 md:px-16 py-16 lg:py-0">
+      <h2 class="text-5xl md:text-6xl font-serif mb-8">Hablemos</h2>
+      <p class="text-gray-400 text-lg mb-12 max-w-md font-light">
+        ¿Tienes un proyecto en mente? ¿Una boda, un evento corporativo o simplemente quieres renovar tu imagen? Estoy aquí para escuchar.
+      </p>
+      <div class="space-y-8">
+        <!-- Email -->
+        <a href="mailto:Shotser05@gmail.com" class="group flex items-center p-6 border border-white/10 hover:border-white/40 bg-white/5 hover:bg-white/10 transition-all duration-300">
+          <div class="bg-white text-red-600 p-3 rounded-full mr-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-envelope fa-lg"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-400 uppercase tracking-wider mb-1">Correo Electrónico</p>
+            <p class="text-xl font-medium group-hover:translate-x-2 transition-transform">Shotser05@gmail.com</p>
+          </div>
+          <i class="fas fa-arrow-right fa-lg ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com/SHOTSER.PHOTO" target="_blank" rel="noreferrer" class="group flex items-center p-6 border border-white/10 hover:border-white/40 bg-white/5 hover:bg-white/10 transition-all duration-300">
+          <div class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white p-3 rounded-full mr-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
+            <i class="fab fa-instagram fa-lg"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-400 uppercase tracking-wider mb-1">Instagram</p>
+            <p class="text-xl font-medium group-hover:translate-x-2 transition-transform">@SHOTSER.PHOTO</p>
+          </div>
+          <i class="fas fa-arrow-right fa-lg ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
+        </a>
+      </div>
+      <footer class="mt-20 pt-8 border-t border-white/10 text-gray-500 text-sm flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+        <div>
+          <p class="font-signature text-xl text-white mb-2">ShotSer</p>
+          <p>© 2025 Sergio Pereira. Todos los derechos reservados.</p>
+        </div>
+        <div class="flex items-center text-white/80 hover:text-white transition-colors">
+          <i class="fas fa-globe fa-xs mr-2"></i>
+          <span class="tracking-widest uppercase text-xs">www.shotser.net</span>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Glider.js Carousel Script -->
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.9/glider.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      new Glider(document.querySelector('.glider-architecture'), {
+        slidesToShow: 1,
+        draggable: true,
+        arrows: {
+          prev: '.glider-architecture-prev',
+          next: '.glider-architecture-next'
+        }
+      });
+      new Glider(document.querySelector('.glider-events'), {
+        slidesToShow: 1,
+        draggable: true,
+        arrows: {
+          prev: '.glider-events-prev',
+          next: '.glider-events-next'
+        }
+      });
+      new Glider(document.querySelector('.glider-portraits'), {
+        slidesToShow: 1,
+        draggable: true,
+        arrows: {
+          prev: '.glider-portraits-prev',
+          next: '.glider-portraits-next'
+        }
+      });
+      new Glider(document.querySelector('.glider-stock'), {
+        slidesToShow: 1,
+        draggable: true,
+        arrows: {
+          prev: '.glider-stock-prev',
+          next: '.glider-stock-next'
+        }
+      });
+    });
+  </script>
+</body>
+</html>
